@@ -54,7 +54,7 @@ const doLogin = async event =>
         else
         {
             var user =
-            {firstName:res.firstName,lastName:res.lastName,id:res.id}
+            {firstName:res.firstName,lastName:res.lastName,email:res.email}
             localStorage.setItem('user_data', JSON.stringify(user));
             setMessage('');
             window.location.href = '/verification';
