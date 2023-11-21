@@ -2,7 +2,8 @@ import React from 'react';
 import PageTitle from '../components/PageTitle';
 import emailNode from '../components/emailNode';
 import LoggedInName from '../components/LoggedInName';
-const LoginPage = () =>
+
+const Verification = () =>
 {
 return(
 <div>
@@ -13,4 +14,4 @@ return(
 </div>
 );
 };
-export default LoginPage;
+export default Verification;
