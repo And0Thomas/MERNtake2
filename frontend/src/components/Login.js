@@ -128,9 +128,9 @@ ref={(c) => loginPassword = c} /><br />
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
 onClick={doLogin} />
 
-<input type="text" id="First Name" placeholder="First Name"
+<input type="text" id="fName" placeholder="First Name"
 ref={(c) => fName = c} /><br />
-<input type="text" id="Last Name" placeholder="Last Name"
+<input type="text" id="lName" placeholder="Last Name"
 ref={(c) => lName = c} /><br />
 <input type="text" id="loginName" placeholder="Username"
 ref={(c) => login = c} /><br />
