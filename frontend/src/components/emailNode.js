@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function emailNode()
+function EmailNode()
 {
 var _ud = localStorage.getItem('user_data');
 var ud = JSON.parse(_ud);
@@ -27,4 +27,4 @@ onClick={doLogout}> Log Out </button>
 );
 };
 
-export default emailNode;
+export default EmailNode;
