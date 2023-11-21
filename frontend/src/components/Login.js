@@ -86,7 +86,7 @@ const signup = async event =>
         }
 
         event.preventDefault();
-        var obj = {Login:login.value,Password:password.value,FirstName:fName.value,LastName:lName.value};
+        var obj = {login:login.value,password:password.value,FirstName:fName.value,LastName:lName.value};
         var js = JSON.stringify(obj);
         try
         {
