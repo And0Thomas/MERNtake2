@@ -9,7 +9,7 @@ var lastName = ud.lastName;
 var email = ud.email;
 return(
 <div id="loggedInDiv">
-<span id="userName">Logged In As {firstName} {lastName} {email}</span><br />
+<span id="userName">Logged {email} In As {firstName} {email} {lastName} {email}</span><br />
 </div>
 );
 };
