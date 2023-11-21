@@ -1,5 +1,10 @@
 import React from 'react';
 const sgMail = require('@sendgrid/mail');
+export const config = {
+    api: {
+       externalResolver: true,
+    },
+  };
 const sendMail = async()=> {
     try{
         await sgMail.send(msg);
