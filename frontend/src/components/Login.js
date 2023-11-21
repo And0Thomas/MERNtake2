@@ -68,6 +68,23 @@ const doLogin = async event =>
 
 const signup = async event =>
     {
+        const app_name = 'cop4331-22-1cc52e3b2505'
+    
+        function buildPath(route)
+        {
+            if (process.env.NODE_ENV === 'production')
+            {
+                console.log("ONElogin")
+                return 'https://' + app_name + '.herokuapp.com/' + route;
+            }
+            else
+            {
+                console.log("TWOlogin")
+                console.log(route)
+                return 'http://localhost:5000/' + route;
+            }
+        }
+
         event.preventDefault();
         var obj = {Login:login.value,Password:password.value,FirstName:fName.value,LastName:lName.value};
         var js = JSON.stringify(obj);
@@ -93,7 +110,7 @@ const signup = async event =>
 
         catch(e)
         {
-            setMessage(e.toString());
+            console.log("help");
         }
     };
 
