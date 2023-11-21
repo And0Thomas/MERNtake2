@@ -1,9 +1,9 @@
 import React from 'react';
-const nodemailer = require('nodemailer');
-
 
 function EmailNode()
 {
+    
+const nodemailer = require('nodemailer');
 var _ud = localStorage.getItem('user_data');
 var ud = JSON.parse(_ud);
 var firstName = ud.firstName;
