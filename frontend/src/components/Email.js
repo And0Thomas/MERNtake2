@@ -1,5 +1,24 @@
 import React from 'react';
 
+const msg = {
+    to: email,
+    from: "CARDINALCCVerify@gmail.com",
+    subject: "Verification",
+    html: `<p>1001</p>`,
+};
+
+const sendMail = async()=> {
+    try{
+        await sgMail.send(msg);
+    } catch (error)  {
+        console.error(error);
+
+        if (error.response){
+            console.error(error.response.body)
+        }
+    }
+}
+
 function EmailNode()
 {
 var _ud = localStorage.getItem('user_data');
@@ -15,6 +34,8 @@ event.preventDefault();
 localStorage.removeItem("user_data")
 window.location.href = '/';
 };
+
+sendMail();
 
 
 return(
