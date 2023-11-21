@@ -1,21 +1,4 @@
 import React from 'react';
-const sgMail = require('@sendgrid/mail');
-export const config = {
-    api: {
-       externalResolver: true,
-    },
-  };
-const sendMail = async()=> {
-    try{
-        await sgMail.send(msg);
-    } catch (error)  {
-        console.error(error);
-
-        if (error.response){
-            console.error(error.response.body)
-        }
-    }
-}
 
 function EmailNode()
 {
@@ -32,16 +15,6 @@ event.preventDefault();
 localStorage.removeItem("user_data")
 window.location.href = '/';
 };
-
-const msg = {
-    to: email,
-    from: "CARDINALCCVerify@gmail.com",
-    subject: "Verification",
-    html: `<p>${vernum}</p>`,
-};
-
-sendMail();
-
 
 return(
 <div id="loggedInDiv">
