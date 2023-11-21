@@ -1,5 +1,4 @@
 import React from 'react';
-const sgMail = require('@sendgrid/mail')
 
 function EmailNode()
 {

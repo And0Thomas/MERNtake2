@@ -21,6 +21,8 @@ async function connectToDB() {
     console.error('Error connecting to MongoDB Atlas:', err);
   }
 }
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 connectToDB();
 
