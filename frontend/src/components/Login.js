@@ -86,7 +86,7 @@ const signup = async event =>
         }
 
         event.preventDefault();
-        var obj = {login:login.value,password:password.value,firstName:fName.value,lastName:lName.value};
+        var obj = {login:login.value,password:password.value,FirstName:fName.value,LastName:lName.value};
         var js = JSON.stringify(obj);
         try
         {
@@ -127,7 +127,7 @@ ref={(c) => loginPassword = c} /><br />
 
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
 onClick={doLogin} />
-
+<br />
 <input type="text" id="fName" placeholder="First Name"
 ref={(c) => fName = c} /><br />
 <input type="text" id="Last Name" placeholder="Last Name"
