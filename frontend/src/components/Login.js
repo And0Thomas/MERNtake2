@@ -104,7 +104,7 @@ const signup = async event =>
             }
             else
             {
-                setMessage('Account has been added');
+                setMessage(fName + lName);
             }
         }
 
