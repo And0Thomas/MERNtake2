@@ -76,29 +76,7 @@ app.post('/api/signup', async (req, res, next) =>
   res.status(200).json(ret);
 });
 
-const transporter = nodemailer.createTransport({
-  service:'gmail',
-  auth: {
-      user: 'CARDINALCCVerify@gmail.com',
-      pass: 'fegs wvih dqtd ccev'
-  }
-});
 
-app.post('/api/email', async (req,res) =>
-{
-  var email = req.body.email
-  var vernum = req.body.vernum
-  var message = {
-    from: "Cardinal Coffee Co" , // sender address
-    to: email, // list of receivers
-    subject: "Welcome Letter", // Subject line
-    html: `
-    <div>
-    <p>Verification code ${vernum}</p>
-    </div>
-    `}
-    transporter.sendMail(message);
-});
 
 // Endpoint for user login
 app.post('/api/login', async (req, res, next) =>
