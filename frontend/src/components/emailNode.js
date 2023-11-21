@@ -7,6 +7,7 @@ var ud = JSON.parse(_ud);
 var firstName = ud.firstName;
 var lastName = ud.lastName;
 var email = ud.email;
+console.log({email});
 return(
 <div id="loggedInDiv">
 <span id="userName">Logged {email} In As {firstName} {email} {lastName} {email}</span><br />
