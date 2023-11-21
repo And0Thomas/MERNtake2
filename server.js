@@ -64,6 +64,7 @@ app.post('/api/signup', async (req, res, next) =>
   {
     const db = client.db('Account');
     const result = db.collection('Users').insertOne({FirstName:first,LastName:last,login:login,password:password});
+    console.log(json.stringify({FirstName:first,LastName:last,login:login,password:password}));
   }
   catch(e)
   {
