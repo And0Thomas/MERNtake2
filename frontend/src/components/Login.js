@@ -110,7 +110,7 @@ const signup = async event =>
 
         catch(e)
         {
-            console.log("help");
+            console.log(e.toString());
         }
     };
 
