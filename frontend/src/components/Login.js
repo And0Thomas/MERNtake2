@@ -121,7 +121,7 @@ ref={(c) => login = c} /><br />
 ref={(c) => password = c} /><br />
 
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
-onClick={doLogin} />
+onClick={signup} />
 </form>
 <span id="loginResult">{message}</span>
 </div>
