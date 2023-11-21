@@ -167,7 +167,7 @@ app.post('/api/signup', async (req, res, next) =>
   var error = '';
   try
   {
-    const db = client.db('Users');
+    const db = client.db('Account');
     const result = db.collection('Users').insertOne(newuser);
   }
   catch(e)
