@@ -200,7 +200,7 @@ app.post('/api/login', async (req, res, next) =>
     ln = results[0].LastName;
   }
 
-  var ret = { Login:login,Password:password};
+  var ret = { id:id, firstName:fn, lastName:ln, error:''};
   res.status(200).json(ret);
 });
 
