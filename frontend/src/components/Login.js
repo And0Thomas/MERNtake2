@@ -10,7 +10,7 @@ const [message,setMessage] = useState('');
 
 const doLogin = async event =>
 {
-    const app_name = 'cop4331-21-48ee0f7c9de7'
+    const app_name = 'cop4331-22-1cc52e3b2505'
     
     function buildPath(route)
     {
