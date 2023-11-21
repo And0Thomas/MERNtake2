@@ -63,14 +63,14 @@ app.post('/api/signup', async (req, res, next) =>
   try
   {
     const db = client.db('Account');
-    const result = db.collection('Users').insertOne({FirstName:first,LastName:last,login:login,password:password});
+    const result = db.collection('Users').insertOne({firstName:first,lastName:last,login:login,password:password});
   }
   catch(e)
   {
     error = e.toString();
   }
 
-  var ret = {FirstName:first,LastName:last,login:login,password:password};
+  var ret = {firstName:first,lastName:last,login:login,password:password};
   res.status(200).json(ret);
 });
 
