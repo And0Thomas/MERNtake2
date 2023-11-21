@@ -1,12 +1,5 @@
 import React from 'react';
-
-const msg = {
-    to: email,
-    from: "CARDINALCCVerify@gmail.com",
-    subject: "Verification",
-    html: `<p>1001</p>`,
-};
-
+const sgMail = require('@sendgrid/mail');
 const sendMail = async()=> {
     try{
         await sgMail.send(msg);
@@ -33,6 +26,13 @@ const doLogout = event =>
 event.preventDefault();
 localStorage.removeItem("user_data")
 window.location.href = '/';
+};
+
+const msg = {
+    to: email,
+    from: "CARDINALCCVerify@gmail.com",
+    subject: "Verification",
+    html: `<p>${vernum}</p>`,
 };
 
 sendMail();
