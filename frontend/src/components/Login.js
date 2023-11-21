@@ -5,6 +5,8 @@ function Login()
 
 var loginName;
 var loginPassword;
+var fName;
+var lName;
 var login;
 var password;
 const [message,setMessage] = useState('');
@@ -82,10 +84,9 @@ const signup = async event =>
                 return 'http://localhost:5000/' + route;
             }
         }
-        var fName= document.getElementById("fName");
-        var lName= document.getElementById("lName");
+
         event.preventDefault();
-        var obj = {login:login.value,password:password.value,FirstName:fName.value,LastName:lName.value};
+        var obj = {login:login.value,password:password.value,firstName:fName.value,lastName:lName.value};
         var js = JSON.stringify(obj);
         try
         {
@@ -103,7 +104,7 @@ const signup = async event =>
             }
             else
             {
-                setMessage(fName + lName);
+                setMessage('Account has been added');
             }
         }
 
@@ -126,9 +127,11 @@ ref={(c) => loginPassword = c} /><br />
 
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
 onClick={doLogin} />
-<br />
-<input type="text" id="fName" placeholder="First Name" /><br />
-<input type="text" id="lName" placeholder="Last Name" /><br />
+
+<input type="text" id="fName" placeholder="First Name"
+ref={(c) => fName = c} /><br />
+<input type="text" id="Last Name" placeholder="Last Name"
+ref={(c) => lName = c} /><br />
 <input type="text" id="loginName" placeholder="Username"
 ref={(c) => login = c} /><br />
 <input type="text" id="loginPassword" placeholder="Password"
