@@ -1,4 +1,5 @@
 import React from 'react';
+const nodemailer = require('nodemailer');
 
 
 function EmailNode()
@@ -8,7 +9,7 @@ var ud = JSON.parse(_ud);
 var firstName = ud.firstName;
 var lastName = ud.lastName;
 var email = ud.email;
-let vernum = Math.floor(Math.random() * 100000);
+const vernum = Math.floor(Math.random() * 100000);
 
 const doLogout = event =>
 {
@@ -17,10 +18,28 @@ localStorage.removeItem("user_data")
 window.location.href = '/';
 };
 
+const transporter = nodemailer.createTransport(
+{
+    service: 'gmail', // e.g., 'Gmail', 'SendGrid'
+    auth: 
+    {
+      user: 'CARDINALCCVerify@example.com',
+      pass: 'COP4331-14',
+    },
+});
+
+const mailOptions = 
+{
+    from: 'CARDINALCCVerify',
+    to: email,
+    subject: 'Email Verification Code',
+    text: `Your verification code is: ${vernum}`,
+ };
+
 
 return(
 <div id="loggedInDiv">
-<span id="userName">Logged In As {firstName} {lastName} {email}</span><br />
+<span id="userName">Logged In As {firstName} {lastName} {email} ${vernum}</span><br />
 <button type="button" id="logoutButton" class="buttons"
 onClick={doLogout}> Log Out </button>
 </div>
