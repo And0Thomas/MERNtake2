@@ -55,9 +55,10 @@ const doLogin = async event =>
         {
             var user =
             {firstName:res.firstName,lastName:res.lastName,email:res.email}
+            console.log(user)
             localStorage.setItem('user_data', JSON.stringify(user));
             setMessage('');
-            window.location.href = '/verification';
+            //window.location.href = '/verification';
         }
     }
     catch(e)
