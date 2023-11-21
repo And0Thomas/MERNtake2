@@ -1,6 +1,6 @@
 import React from 'react';
 import PageTitle from '../components/PageTitle';
-import EmailNode from '../components/EmailNode';
+import emailNode from '../components/emailNode';
 
 const Verification = () =>
 {
@@ -8,7 +8,7 @@ return(
 <div>
 <h1 id="title">Verification</h1>
     <PageTitle />
-    <EmailNode />
+    <emailNode />
 </div>
 );
 };
