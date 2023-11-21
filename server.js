@@ -158,24 +158,23 @@ const cardList = [
 ];
 
 // Endpoint to add a card
-app.post('/api/addcard', async (req, res, next) =>
+app.post('/api/signup', async (req, res, next) =>
 {
   // incoming: userId, color
   // outgoing: error
-  const { userId, card } = req.body;
-  const newCard = {Card:card,UserId:userId};
+  const { login, password, first, last } = req.body;
+  const newuser = {Login:login.value,Password:password.value,FirstName:fName.value,LastName:lName.value};
   var error = '';
   try
   {
-    const db = client.db("cluster0tek");
-    const result = db.collection('Cards').insertOne(newCard);
+    const db = client.db();
+    const result = db.collection('Users').insertOne(newuser);
   }
   catch(e)
   {
     error = e.toString();
   }
 
-  cardList.push( card );
   var ret = { error: error };
   res.status(200).json(ret);
 });
