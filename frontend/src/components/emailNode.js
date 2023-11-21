@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function emailNode()
 {
 var _ud = localStorage.getItem('user_data');
