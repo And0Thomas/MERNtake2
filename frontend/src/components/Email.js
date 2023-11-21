@@ -20,7 +20,7 @@ window.location.href = '/';
 
 return(
 <div id="loggedInDiv">
-<span id="userName">Logged In As {firstName} {lastName} {email}</span><br />
+<span id="userName">Hello {firstName} {lastName} {email}</span><br />
 <button type="button" id="logoutButton" class="buttons"
 onClick={doLogout}> Log Out </button>
 </div>
