@@ -1,6 +1,6 @@
 import React from 'react';
 import PageTitle from '../components/PageTitle';
-import EmailNode from '../components/EmailNode';
+import EmailNode from '../components/Email';
 
 const Verification = () =>
 {
