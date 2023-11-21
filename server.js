@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(express.json());
 app.use(cors());
@@ -21,8 +23,29 @@ async function connectToDB() {
     console.error('Error connecting to MongoDB Atlas:', err);
   }
 }
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+app.post('/api/email',  async(req,res)=>{
+    var email = req.body.email
+    var vernum = req.body.vernum
+    const msg = {
+      to: email,
+      from: "CARDINALCCVerify@gmail.com",
+      subject: "Verification",
+      html: `<p>${vernum}</p>`,
+  };
+
+    try{
+    await sgMail.send(msg);
+    } catch (error)  {
+    console.error(error);
+
+    if (error.response){
+        console.error(error.response.body)
+    }
+}
+)
+
+
 connectToDB();
 
 const path = require('path');
