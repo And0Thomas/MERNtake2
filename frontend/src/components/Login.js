@@ -128,13 +128,13 @@ ref={(c) => loginPassword = c} /><br />
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
 onClick={doLogin} />
 
-<input type="text" id="First Name" placeholder="Username"
+<input type="text" id="First Name" placeholder="First Name"
 ref={(c) => fName = c} /><br />
-<input type="password" id="Last Name" placeholder="Password"
+<input type="text" id="Last Name" placeholder="Last Name"
 ref={(c) => lName = c} /><br />
 <input type="text" id="loginName" placeholder="Username"
 ref={(c) => login = c} /><br />
-<input type="password" id="loginPassword" placeholder="Password"
+<input type="text" id="loginPassword" placeholder="Password"
 ref={(c) => password = c} /><br />
 
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
