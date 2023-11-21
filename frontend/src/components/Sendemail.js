@@ -25,7 +25,7 @@ module.exports =
             from: "Cardinal Coffee Co" , // sender address
             to: newUser, // list of receivers
             subject: "Welcome Letter", // Subject line
-            text: message // plain text body
+            text: "Hello" // plain text body
         };
 
         // send mail with defined transport object
