@@ -24,7 +24,8 @@ async function connectToDB() {
   }
 }
 
-app.post('/api/email',  async(req,res)=>{
+app.post('/api/email',  async(req,res)=>
+{
     var email = req.body.email
     var vernum = req.body.vernum
     const msg = {
@@ -38,12 +39,12 @@ app.post('/api/email',  async(req,res)=>{
     await sgMail.send(msg);
     } catch (error)  {
     console.error(error);
-
-    if (error.response){
+    }
+    if (error.response)
+    {
         console.error(error.response.body)
     }
-}
-)
+});
 
 
 connectToDB();
