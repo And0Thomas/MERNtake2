@@ -5,6 +5,10 @@ function Login()
 
 var loginName;
 var loginPassword;
+var fName;
+var lName;
+var login;
+var password;
 const [message,setMessage] = useState('');
 
 
@@ -62,6 +66,36 @@ const doLogin = async event =>
     }
 };
 
+const signup = async event =>
+    {
+        event.preventDefault();
+        var obj = {Login:login.value,Password:password.value,FirstName:fName.value,LastName:lName.value};
+        var js = JSON.stringify(obj);
+        try
+        {
+            const response = await fetch(buildPath('api/signup'), {
+                method: 'POST',
+                body: js,
+                headers: { 'Content-Type': 'application/json' }
+              });
+
+            var txt = await response.text();
+            var res = JSON.parse(txt);
+            if( res.error.length > 0 )
+            {
+                setMessage( "API Error:" + res.error );
+            }
+            else
+            {
+                setMessage('Account has been added');
+            }
+        }
+
+        catch(e)
+        {
+            setMessage(e.toString());
+        }
+    };
 
 
 return(
@@ -75,11 +109,24 @@ ref={(c) => loginName = c} /><br />
 ref={(c) => loginPassword = c} /><br />
 
 <input type="submit" id="loginButton" class="buttons" value = "Do It"
+onClick={doLogin} />
 
+<input type="text" id="First Name" placeholder="Username"
+ref={(c) => fName = c} /><br />
+<input type="password" id="Last Name" placeholder="Password"
+ref={(c) => lName = c} /><br />
+<input type="text" id="loginName" placeholder="Username"
+ref={(c) => login = c} /><br />
+<input type="password" id="loginPassword" placeholder="Password"
+ref={(c) => password = c} /><br />
+
+<input type="submit" id="loginButton" class="buttons" value = "Do It"
 onClick={doLogin} />
 </form>
 <span id="loginResult">{message}</span>
 </div>
 );
+
+
 };
 export default Login;
