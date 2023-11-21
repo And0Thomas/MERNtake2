@@ -9,6 +9,7 @@ var fName;
 var lName;
 var login;
 var password;
+var email;
 const [message,setMessage] = useState('');
 
 
@@ -86,7 +87,7 @@ const signup = async event =>
         }
 
         event.preventDefault();
-        var obj = {login:login.value,password:password.value,FirstName:fName.value,LastName:lName.value};
+        var obj = {login:login.value,password:password.value,FirstName:fName.value,LastName:lName.value,email:email.value};
         var js = JSON.stringify(obj);
         try
         {
@@ -132,6 +133,8 @@ onClick={doLogin} />
 ref={(c) => fName = c} /><br />
 <input type="text" id="Last Name" placeholder="Last Name"
 ref={(c) => lName = c} /><br />
+<input type="text" id="Email" placeholder="Email"
+ref={(c) => email = c} /><br />
 <input type="text" id="loginName" placeholder="Username"
 ref={(c) => login = c} /><br />
 <input type="text" id="loginPassword" placeholder="Password"
