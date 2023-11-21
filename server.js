@@ -187,7 +187,7 @@ app.post('/api/login', async (req, res, next) =>
   // outgoing: id, firstName, lastName, error
   var error = '';
   const { login, password } = req.body;
-  const db = client.db("cluster0tek");
+  const db = client.db("Users");
   const results = await
   db.collection('Users').find({Login:login,Password:password}).toArray();
   var id = -1;
