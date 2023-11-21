@@ -57,7 +57,7 @@ const doLogin = async event =>
             {firstName:res.firstName,lastName:res.lastName,id:res.id}
             localStorage.setItem('user_data', JSON.stringify(user));
             setMessage('');
-            window.location.href = '/cards';
+            window.location.href = '/verification';
         }
     }
     catch(e)
