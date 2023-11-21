@@ -5,7 +5,7 @@ function Login()
 
 var loginName;
 var loginPassword;
-var fName = "hi";
+var fName;
 var lName;
 var login;
 var password;
