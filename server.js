@@ -58,19 +58,19 @@ app.post('/api/signup', async (req, res, next) =>
 {
   // incoming: userId, color
   // outgoing: error
-  const { login, password, first, last } = req.body;
+  const { login, password, FirstName, LastName} = req.body;
   var error = '';
   try
   {
     const db = client.db('Account');
-    const result = db.collection('Users').insertOne({FirstName:first,LastName:last,login:login,password:password});
+    const result = db.collection('Users').insertOne({FirstName:FirstName,LastName:LastName,login:login,password:password});
   }
   catch(e)
   {
     error = e.toString();
   }
 
-  var ret = {firstName:first,lastName:last,login:login,password:password};
+  var ret = {FirstName:FirstName,LastName:LastName,login:login,password:password};
   res.status(200).json(ret);
 });
 
