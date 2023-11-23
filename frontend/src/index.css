@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Tanker';
+    src: url('/fonts/Tanker-Regular.woff') format('woff');
+  }
+}
+
+body {
+  background-color: #121212;
+}
