@@ -59,7 +59,7 @@ const Navbar = () => {
             <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-In</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => showAlert('Cart button clicked')}>Cart</button>
+            <a href='/Verification' className='button-link'>Cart</a>
           </li>
         </ul>
       </div>
