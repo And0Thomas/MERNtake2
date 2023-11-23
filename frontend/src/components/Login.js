@@ -58,7 +58,7 @@ const doLogin = async event =>
             console.log(user)
             localStorage.setItem('user_data', JSON.stringify(user));
             setMessage('');
-            window.location.href = '/verification';
+            window.location.href = '/Verification';
         }
     }
     catch(e)
