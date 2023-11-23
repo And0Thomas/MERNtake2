@@ -32,6 +32,17 @@ console.log("port is " + PORT)
 
 app.set('port', (process.env.PORT || 5000));
 
+
+if (process.env.NODE_ENV === 'production')
+{
+// Set static folder
+app.use(express.static('frontend'));
+app.get('*', (req, res) =>
+{
+  res.sendFile(path.resolve(__dirname, 'frontend', 'index.html'));
+});
+}
+
 app.listen(PORT, () =>
 {
   console.log('Server listening on port ' + PORT);
