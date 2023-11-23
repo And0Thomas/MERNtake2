@@ -12,6 +12,7 @@ const Navbar = () => {
 
   const showAlert = (message) => {
     window.alert(message);
+    window.location.href = '/verification';
   };
 
   return (
@@ -59,7 +60,7 @@ const Navbar = () => {
             <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-In</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <a href='/Verification' className='button-link'>Cart</a>
+            <button className='focus:outline-none' onClick={() => showAlert('Cart button clicked')}>Cart</button>
           </li>
         </ul>
       </div>
