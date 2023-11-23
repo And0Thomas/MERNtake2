@@ -10,6 +10,10 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  const showAlert = (message) => {
+    window.alert(message);
+  };
+
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white font-tanker tracking-wider'>
       <img src={Logo} alt='Logo' className='h-16 cursor-pointer' />
@@ -18,16 +22,16 @@ const Navbar = () => {
       </h1>
       <ul className='hidden md:flex'>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none'>Home</button>
+          <button className='focus:outline-none' onClick={() => showAlert('Home button clicked')}>Home</button>
         </li>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none'>Products</button>
+          <button className='focus:outline-none' onClick={() => showAlert('Products button clicked')}>Products</button>
         </li>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none'>Contact</button>
+          <button className='focus:outline-none' onClick={() => showAlert('Contact button clicked')}>Contact</button>
         </li>
         <li className='whitespace-nowrap p-4 cursor-pointer'>
-          <button className='focus:outline-none'>Sign-In</button>
+          <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-In</button>
         </li>
       </ul>
       <img src={Bag} alt='/' className='hidden md:flex p-3 h-11 cursor-pointer' />
@@ -46,16 +50,16 @@ const Navbar = () => {
         </h1>
         <ul className='uppercase p-4'>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none'>Home</button>
+            <button className='focus:outline-none' onClick={() => showAlert('Home button clicked')}>Home</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none'>Products</button>
+            <button className='focus:outline-none' onClick={() => showAlert('Products button clicked')}>Products</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none'>Sign-In</button>
+            <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-In</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none'>Cart</button>
+            <button className='focus:outline-none' onClick={() => showAlert('Cart button clicked')}>Cart</button>
           </li>
         </ul>
       </div>
