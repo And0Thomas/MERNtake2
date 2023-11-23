@@ -1,13 +1,15 @@
-import React from 'react';
-import PageTitle from '../components/PageTitle';
-import Login from '../components/Login';
-const LoginPage = () =>
-{
-return(
-<div>
-<PageTitle />
-<Login />
-</div>
-);
-};
-export default LoginPage;
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
+import Contact from "./components/Contact"
+
+function Home() {
+  return(
+    <div>
+      <Navbar/>
+      <Hero/>
+      <Contact/>
+    </div>
+  )
+}
+
+export default Home
