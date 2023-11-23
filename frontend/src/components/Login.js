@@ -15,14 +15,14 @@ const [message,setMessage] = useState('');
 
 const doLogin = async event =>
 {
-    const app_name = 'cop4331-22-1cc52e3b2505'
+    const app_name = 'www.cardinalcoffee.co'
     
     function buildPath(route)
     {
         if (process.env.NODE_ENV === 'production')
         {
             console.log("ONElogin")
-            return 'https://' + app_name + '.herokuapp.com/' + route;
+            return 'https://' + app_name  + route;
         }
         else
         {
@@ -70,14 +70,14 @@ const doLogin = async event =>
 
 const signup = async event =>
     {
-        const app_name = 'cop4331-22-1cc52e3b2505'
+        const app_name = 'www.cardinalcoffee.co'
     
         function buildPath(route)
         {
             if (process.env.NODE_ENV === 'production')
             {
                 console.log("ONElogin")
-                return 'https://' + app_name + '.herokuapp.com/' + route;
+                return 'https://' + app_name + route;
             }
             else
             {
