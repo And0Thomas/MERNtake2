@@ -8,19 +8,19 @@ const ProductCard = ({ product, isPopular}) => {
     };
 
     const handleAddToCartClick = () => {
-        onAddToCart(product.id, quantity);
-    };
+        const Pr1 = localStorage.getItem("P1");
+        const Pr2 = localStorage.getItem("P2");
+        const Pr3 = localStorage.getItem("P3");
+        const Pr4 = localStorage.getItem("P4");
 
-    const onAddToCart = (productId, quantity) => {
-
-        if (productId === 1) {
-            localStorage.setItem("P1", quantity);
-        } else if (productId === 2) {
-            localStorage.setItem("P2", quantity);
-        } else if (productId === 3) {
-            localStorage.setItem("P3", quantity);
-        } else if (productId === 4) {
-            localStorage.setItem("P4", quantity);
+        if (product.Id === 1) {
+            localStorage.setItem("P1", Pr1 + quantity);
+        } else if (product.Id === 2) {
+            localStorage.setItem("P2", Pr2 + quantity);
+        } else if (product.Id === 3) {
+            localStorage.setItem("P3", Pr3 + quantity);
+        } else if (product.Id === 4) {
+            localStorage.setItem("P4", Pr4 + quantity);
         }
 
         const Prod1 = localStorage.getItem("P1");
