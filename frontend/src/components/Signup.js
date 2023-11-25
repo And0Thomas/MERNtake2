@@ -30,11 +30,11 @@ const SignUp = () => {
         let currentErrors = {};
 
         if (!validateEmail(formData.email)) {
-            window.alert('Invalid email address');
+            currentErrors.email = 'Invalid email address';
         }
 
         if (formData.password !== formData.confirmPassword) {
-            indow.alert('Passwords do not match');
+            currentErrors.password = 'Passwords do not match';
         }
 
         setErrors(currentErrors);
@@ -47,11 +47,11 @@ const SignUp = () => {
     const signup = async event =>
     {
         if (!validateEmail(formData.email)) {
-            currentErrors.email = 'Invalid email address';
+            window.alert('Invalid email address');
         }
 
         else if (formData.password !== formData.confirmPassword) {
-            currentErrors.password = 'Passwords do not match';
+            window.alert('Passwords do not match');
         }
         else
         {
