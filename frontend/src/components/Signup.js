@@ -82,7 +82,7 @@ const SignUp = () => {
             }
             else
             {
-                setMessage('Account has been added');
+                window.location.href = '/signin';
             }
         }
 

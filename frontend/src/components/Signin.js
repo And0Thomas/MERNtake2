@@ -69,7 +69,7 @@ const doLogin = async event =>
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="email">
                             Login
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email"ref={(c) => loginName = c}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your login"ref={(c) => loginName = c}/>
                     </div>
                     <div className="mb-6">
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="password">
