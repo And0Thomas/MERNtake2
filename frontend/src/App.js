@@ -18,7 +18,7 @@ return (
 <Route path="/Signin" index element={<Signin />} />
 <Route path="/products" index element={<Products />} />
 <Route path="/Contacts" index element={<Contacts />} />
-<Route path="/Cart" index element={<Contacts />} />
+<Route path="/Cart" index element={<CartPage />} />
 </Routes>
 </BrowserRouter>
 );
