@@ -52,23 +52,23 @@ const CartPage = () => {
     const updateQuantity = (itemId, quantity) => {
         setCartItems(cartItems.map(item => {
             if (item.id === itemId) {
+                if (item.id === 1)
+                {
+                    localStorage.setItem("P1", Number(quantity));
+                }
+                if (item.id === 2)
+                {
+                    localStorage.setItem("P2", Number(quantity));
+                }
+                if (item.id === 3)
+                {
+                    localStorage.setItem("P3", Number(quantity));
+                }
+                if (item.id === 4)
+                {
+                    localStorage.setItem("P4", Number(quantity));
+                }
                 return { ...item, quantity: parseInt(quantity, 10) };
-            }
-            if (item.id === 1)
-            {
-                localStorage.setItem("P1", Number(quantity));
-            }
-            if (item.id === 2)
-            {
-                localStorage.setItem("P2", Number(quantity));
-            }
-            if (item.id === 3)
-            {
-                localStorage.setItem("P3", Number(quantity));
-            }
-            if (item.id === 4)
-            {
-                localStorage.setItem("P4", Number(quantity));
             }
             return item;
         }));
@@ -76,19 +76,19 @@ const CartPage = () => {
 
     const removeItem = (itemId) => {
         setCartItems(cartItems.filter(item => item.id !== itemId));
-        if (item === 1)
+        if (itemId === 1)
         {
             localStorage.setItem("P1", 0);
         }
-        if (item === 2)
+        if (itemId === 2)
         {
             localStorage.setItem("P2", 0);
         }
-        if (item === 3)
+        if (itemId === 3)
         {
             localStorage.setItem("P3", 0);
         }
-        if (item === 4)
+        if (itemId === 4)
         {
             localStorage.setItem("P4", 0);
         }
