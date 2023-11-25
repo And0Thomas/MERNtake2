@@ -1,11 +1,11 @@
 import NaviP from "../components/NaviP"
-import Contact from "../components/Contact"
+import ContactP from "../components/ContactP"
 
 function ContactPs() {
   return(
     <div>
       <NaviP/>
-      <Contact/>
+      <ContactP/>
     </div>
   )
 }

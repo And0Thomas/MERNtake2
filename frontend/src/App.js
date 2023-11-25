@@ -7,7 +7,7 @@ import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Products from './pages/Products';
 import Contacts from './pages/Contacts';
-import ContactPs from './pages/ContactPs';
+import ContactP from './pages/ContactP';
 import CartPage from './pages/CartPage';
 function App() {
 return (
@@ -19,7 +19,7 @@ return (
 <Route path="/Signin" index element={<Signin />} />
 <Route path="/products" index element={<Products />} />
 <Route path="/Contacts" index element={<Contacts />} />
-<Route path="/ContactPs" index element={<ContactPs />} />
+<Route path="/ContactP" index element={<ContactP />} />
 <Route path="/Cart" index element={<CartPage />} />
 </Routes>
 </BrowserRouter>
