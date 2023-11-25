@@ -9,6 +9,10 @@ export default {
         'cream': '#f0e4d7',
         'neumorphic-background': '#f0e4d7', // Cream background
         'neumorphic-text': '#5d4037', // Dark brown text
+        'mocha': '#6b4f4b',
+        'latte-light': '#9c7c78',
+        'espresso-dark': '#3e2c29',
+        'cappuccino-cream': '#f5f5f5',
         coffee: {
           500: '#795548', // Adjust the color code as needed
           700: '#5D4037',

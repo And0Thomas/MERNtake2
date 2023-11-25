@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   const cart = (message) => {
-    window.alert(message);
+    window.location.href = '/Cart';
   };
   const products = (message) => {
     //window.alert(message);
