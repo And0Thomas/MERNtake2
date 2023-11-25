@@ -12,7 +12,6 @@ const ProductCard = ({ product, isPopular}) => {
     };
 
     const onAddToCart = (productId, quantity) => {
-        console.log(`Adding ${quantity} ${products.find(product => product.id === productId).name}(s) with ID ${productId} to the cart`);
 
         if (productId === 1) {
             localStorage.setItem("P1", quantity);
