@@ -1,9 +1,13 @@
 import React from 'react';
+import React, { useState } from 'react'
 
 const SignIn = () => {
 
 var loginName;
 var loginPassword;
+const [message,setMessage] = useState('');
+
+
 
 const doLogin = async event =>
 {
@@ -25,8 +29,6 @@ const doLogin = async event =>
     }
 
     event.preventDefault();
-    loginName = document.getElementById("email").value;
-    loginPassword = document.getElementById("password").value;
     var obj = {login:loginName.value,password:loginPassword.value};
     var js = JSON.stringify(obj);
 
@@ -43,7 +45,7 @@ const doLogin = async event =>
         var res = JSON.parse(await response.text());
         if( res.id <= 0 )
         {
-            window.alert('User/Password combination incorrect');
+            setMessage('User/Password combination incorrect');
         }
         else
         {
@@ -51,6 +53,7 @@ const doLogin = async event =>
             {firstName:res.firstName,lastName:res.lastName,email:res.email}
             console.log(user)
             localStorage.setItem('user_data', JSON.stringify(user));
+            setMessage('');
             //window.location.href = '/Verification';
         }
     }
@@ -66,10 +69,10 @@ const doLogin = async event =>
                 <h2 className="text-lg font-semibold text-coffee-800 mb-4">Welcome Back!</h2>
                 <form>
                     <div className="mb-4">
-                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="email">
+                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="email" ref={(c) => loginName = c}>
                             Login
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email"/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email" ref={(c) => loginPassword = c}/>
                     </div>
                     <div className="mb-6">
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="password">
