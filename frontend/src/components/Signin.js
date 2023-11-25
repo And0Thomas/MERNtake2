@@ -6,11 +6,6 @@ var loginName;
 var loginPassword;
 const [message,setMessage] = useState('');
 
-const showAlert = (message) => {
-    window.alert(message);
-    window.location.href = '/signin/singup';
-  };
-
 const doLogin = async event =>
 {
     const app_name = 'www.cardinalcoffee.co/'
@@ -86,9 +81,6 @@ const doLogin = async event =>
                     <div className="flex items-center justify-between">
                         <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={doLogin}>
                             Sign In
-                        </button>
-                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={() => showAlert('Sign-Up button clicked')}>
-                            Sign Up
                         </button>
                     </div>
                 </form>
