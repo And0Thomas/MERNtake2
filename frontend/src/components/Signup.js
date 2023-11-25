@@ -7,12 +7,14 @@ const SignUp = () => {
     var login;
     var password;
     var email;
+    var code;
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        code: ''
     });
     const [errors, setErrors] = useState({});
 
@@ -46,10 +48,15 @@ const SignUp = () => {
 
     const signup = async event =>
     {
-        if (!validateEmail(formData.email)) {
+        if (!validateEmail(formData.email)) 
+        {
         }
 
-        else if (formData.password !== formData.confirmPassword) {
+        else if (formData.password !== formData.confirmPassword) 
+        {
+        }
+        else if (formData.password !== 'UCF')
+        {
         }
         else
         {
@@ -152,6 +159,13 @@ const SignUp = () => {
                         </label>
                         <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" onChange={handleChange}/>
                         {errors.password && <p className="text-red-500 text-xs italic">{errors.password}</p>}
+                    </div>
+
+                    <div className="mb-6">
+                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
+                            Invite Code
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="code" name="code" type="code" placeholder="Invite Code" onChange={handleChange} ref={(c) => Code = c}/>
                     </div>
 
                     {/* Sign Up Button */}
