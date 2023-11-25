@@ -46,7 +46,7 @@ const SignUp = () => {
 
     const signup = async event =>
     {
-        const app_name = 'www.cardinalcoffee.co'
+        const app_name = 'www.cardinalcoffee.co/'
     
         function buildPath(route)
         {
