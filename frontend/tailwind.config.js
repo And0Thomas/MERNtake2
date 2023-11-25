@@ -4,9 +4,11 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
-      coffee: {
-        500: '#795548', // Adjust the color code as needed
-        700: '#5D4037',
+      colors: {
+        coffee: {
+          500: '#795548', // Adjust the color code as needed
+          700: '#5D4037',
+        }
       },
       fontFamily: {
         tanker: ['Tanker', 'sans-serif'],
@@ -15,4 +17,3 @@ export default {
   },
   plugins: [],
 }
-
