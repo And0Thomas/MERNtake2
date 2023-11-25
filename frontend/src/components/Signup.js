@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 
 const SignUp = () => {
+    const [message,setMessage] = useState('');
+    var fName;
+    var lName;
+    var login;
+    var password;
+    var email;
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -95,14 +102,14 @@ const SignUp = () => {
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
                             First Name
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your first name" onChange={handleChange}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your first name" onChange={handleChange} ref={(c) => fName = c}/>
                     </div>
 
                     <div className="mb-4">
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
                             Last Name
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your last name" onChange={handleChange}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your last name" onChange={handleChange} ref={(c) => lName = c} />
                     </div>
                     
                     {/* Email Field */}
@@ -110,16 +117,23 @@ const SignUp = () => {
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="email">
                             Email
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" name="email" type="email" placeholder="Your email" onChange={handleChange}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" name="email" type="email" placeholder="Your email" onChange={handleChange} ref={(c) => email = c} />
                         {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
                     </div>
                     
                     {/* Password Field */}
                     <div className="mb-4">
+                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
+                            Login
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your Login" onChange={handleChange} ref={(c) => login = c} />
+                    </div>
+
+                    <div className="mb-4">
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="password">
                             Password
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="password" name="password" type="password" placeholder="Password" onChange={handleChange}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="password" name="password" type="password" placeholder="Password" onChange={handleChange} ref={(c) => password = c}/>
                     </div>
                     
                     {/* Confirm Password Field */}
