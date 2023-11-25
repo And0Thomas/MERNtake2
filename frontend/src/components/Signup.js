@@ -86,7 +86,7 @@ const SignUp = () => {
 
             var txt = await response.text();
             var res = JSON.parse(txt);
-            if( res.error.length > 0 )
+            if( res.password.length < 0 )
             {
                 setMessage( "API Error:" + res.error );
             }
