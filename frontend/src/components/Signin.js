@@ -43,7 +43,7 @@ const doLogin = async event =>
         var res = JSON.parse(await response.text());
         if( res.id <= 0 )
         {
-            setMessage('User/Password combination incorrect');
+            window.alert('User/Password combination incorrect');
         }
         else
         {
@@ -51,7 +51,6 @@ const doLogin = async event =>
             {firstName:res.firstName,lastName:res.lastName,email:res.email}
             console.log(user)
             localStorage.setItem('user_data', JSON.stringify(user));
-            setMessage('');
             //window.location.href = '/Verification';
         }
     }
