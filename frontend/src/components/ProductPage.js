@@ -14,16 +14,16 @@ const ProductCard = ({ product, isPopular}) => {
         const Pr4 = localStorage.getItem("P4");
 
         if (product.Id === 1) {
-            Pr1 = Pr1 + quantitiy;
+            Pr1 = Pr1 + quantity;
             localStorage.setItem("P1", Pr1);
         } else if (product.Id === 2) {
-            Pr2= Pr2 + quantitiy;
+            Pr2= Pr2 + quantity;
             localStorage.setItem("P2", Pr2);
         } else if (product.Id === 3) {
-            Pr3 = Pr3 + quantitiy;
+            Pr3 = Pr3 + quantity;
             localStorage.setItem("P3", Pr3);
         } else if (product.Id === 4) {
-            Pr4 = Pr3 + quantitiy;
+            Pr4 = Pr3 + quantity;
             localStorage.setItem("P4", Pr4);
         }
 
