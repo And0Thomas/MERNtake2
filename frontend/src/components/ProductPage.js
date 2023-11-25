@@ -9,22 +9,21 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
 
     const handleAddToCartClick = () => {
         onAddToCart(product.id, quantity);
-        if(product.id = 1)
-        {
+    };
+
+    const onAddToCart = (productId, quantity) => {
+        console.log(`Adding ${quantity} ${products.find(product => product.id === productId).name}(s) with ID ${productId} to the cart`);
+
+        if (productId === 1) {
             localStorage.setItem("P1", quantity);
-        }
-        else if(product.id = 2)
-        {
+        } else if (productId === 2) {
             localStorage.setItem("P2", quantity);
-        }
-        else if(product.id = 3)
-        {
+        } else if (productId === 3) {
             localStorage.setItem("P3", quantity);
-        }
-        else if(product.id = 4)
-        {
+        } else if (productId === 4) {
             localStorage.setItem("P4", quantity);
         }
+
         const Prod1 = localStorage.getItem("P1");
         const Prod2 = localStorage.getItem("P2");
         const Prod3 = localStorage.getItem("P3");
