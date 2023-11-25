@@ -52,6 +52,7 @@ const doLogin = async event =>
             localStorage.setItem('user_data', JSON.stringify(user));
             setMessage('');
             localStorage.clear();
+            localStorage.setItem("ID", 1);
             localStorage.setItem("P1", 0);
             localStorage.setItem("P2", 0);
             localStorage.setItem("P3", 0);
