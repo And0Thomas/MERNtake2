@@ -22,6 +22,7 @@ const ProductCard = ({ product, isPopular }) => {
                 </p>
                 <div className="text-lg text-neumorphic-text font-bold my-2">
                     ${product.price}
+                </div>
                 <div className="mt-4">
                     <label htmlFor={`quantity-${product.id}`} className="block text-neumorphic-text text-sm font-bold mb-2">Quantity:</label>
                     <input type="number" id={`quantity-${product.id}`} name="quantity" min="1" value={quantity} onChange={handleQuantityChange} className="neumorphic-input"/>
