@@ -2,6 +2,11 @@ import NaviP from "../components/NaviP"
 import ProductPage from "../components/ProductPage"
 
 function Products() {
+  var ID = number(localStorage.getItem("ID", 1));
+    if(ID !== 1)
+    {
+        window.location.href = '/';
+    }
   return(
     <div>
       <NaviP />
