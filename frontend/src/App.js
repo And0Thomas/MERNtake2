@@ -10,11 +10,11 @@ function App() {
 return (
 <BrowserRouter>
 <Routes>
-<Route exact path="/" index element={<Home />} />
-<Route exact path="/cards" index element={<CardPage />} />
-<Route exact path="/Signup" index element={<Signup />} />
-<Route exact path="/Signin" index element={<Signin />} />
-<Route exact path="/products" index element={<Products />} />
+<Route path="/" index element={<Home />} />
+<Route path="/cards" index element={<CardPage />} />
+<Route path="/signin/Signup" index element={<Signup />} />
+<Route path="/Signin" index element={<Signin />} />
+<Route path="/products" index element={<Products />} />
 </Routes>
 </BrowserRouter>
 );

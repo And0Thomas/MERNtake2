@@ -8,7 +8,7 @@ const [message,setMessage] = useState('');
 
 const showAlert = (message) => {
     window.alert(message);
-    window.location.href = 'https://www.cardinalcoffee.co/signup';
+    window.location.href = '/signin/singup';
   };
 
 const doLogin = async event =>
