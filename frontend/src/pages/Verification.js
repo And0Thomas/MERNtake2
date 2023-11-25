@@ -1,12 +1,12 @@
 import React from 'react';
 import Navi from "../components/Navi"
-import Hero from "../components/Hero"
+import SignIn from "../components/Signin"
 
 function Verification() {
     return(
       <div>
         <Navi/>
-        <Hero/>
+        <SignIn/>
       </div>
     )
   }
