@@ -61,7 +61,6 @@ const Navbar = () => {
           <button className='focus:outline-none' onClick={() => signUp('Sign-In button clicked')}>Sign-Up</button>
         </li>
       </ul>
-      <img src={Bag} alt='/' className='hidden md:flex p-3 h-11 cursor-pointer' onClick={() => cart('Cart button clicked')}/>
       <div onClick={handleNav} className='block md:hidden cursor-pointer p-4'>
         {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
@@ -87,9 +86,6 @@ const Navbar = () => {
           </li>
           <li className='p-4 border-b cursor-pointer'>
             <button className='focus:outline-none' onClick={() => signUp('Sign-Up button clicked')}>Sign-Up</button>
-          </li>
-          <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => cart('Cart button clicked')}>Cart</button>
           </li>
           
         </ul>
