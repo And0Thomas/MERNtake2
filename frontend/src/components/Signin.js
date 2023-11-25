@@ -6,6 +6,10 @@ var loginName;
 var loginPassword;
 const [message,setMessage] = useState('');
 
+const doSignUp = async event =>
+{
+    
+};
 
 
 const doLogin = async event =>
@@ -84,7 +88,7 @@ const doLogin = async event =>
                         <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={doLogin}>
                             Sign In
                         </button>
-                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onclick="">
+                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onclick={doSignUp}>
                             Sign Up
                         </button>
                     </div>
