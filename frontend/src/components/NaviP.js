@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const contacts = (message) => {
     //window.alert(message);
-    window.location.href = '/contactPs';
+    window.location.href = '/contactP';
   };
 
   const signIn = (message) => {
