@@ -14,8 +14,7 @@ const ProductCard = ({ product, isPopular}) => {
         const Pr4 = localStorage.getItem("P4");
 
         if (product.id === 1) {
-            quantity = quantity + Pr1
-            localStorage.setItem("P1", quantity);
+            localStorage.setItem("P1", Number(quantity) + Number(Pr1));
         } else if (product.id === 2) {
             quantity = quantity + Pr2
             localStorage.setItem("P2", quantity);
