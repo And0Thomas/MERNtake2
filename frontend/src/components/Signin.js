@@ -8,7 +8,7 @@ const [message,setMessage] = useState('');
 
 const showAlert = (message) => {
     window.alert(message);
-    window.location.href = 'www.cardinalcoffee.co/signup';
+    window.location.href = 'https://www.cardinalcoffee.co/signup';
   };
 
 const doLogin = async event =>
@@ -87,7 +87,7 @@ const doLogin = async event =>
                         <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={doLogin}>
                             Sign In
                         </button>
-                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={() => showAlert('Sign-In button clicked')}>
+                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={() => showAlert('Sign-Up button clicked')}>
                             Sign Up
                         </button>
                     </div>
