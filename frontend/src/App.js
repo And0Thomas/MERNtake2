@@ -12,8 +12,8 @@ return (
 <Routes>
 <Route path="/" index element={<Home />} />
 <Route path="/cards" index element={<CardPage />} />
-<Route path="/Signin" index element={<Signin />} />
 <Route path="/Signup" index element={<Signup />} />
+<Route path="/Signin" index element={<Signin />} />
 <Route path="/products" index element={<Products />} />
 </Routes>
 </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react';
 import Navi from "../components/Navi"
 import SignUp from "../components/Signup"
 
-function Signup() {
+function signup() {
     return(
       <div>
         <Navi/>
@@ -10,4 +10,4 @@ function Signup() {
       </div>
     )
   }
-export default Signup;
+export default signup;

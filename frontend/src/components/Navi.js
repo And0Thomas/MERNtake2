@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const signIn = (message) => {
     window.alert(message);
-    window.location.href = '/Signup';
+    window.location.href = '/signin';
   };
 
   const home = (message) => {
