@@ -47,11 +47,9 @@ const SignUp = () => {
     const signup = async event =>
     {
         if (!validateEmail(formData.email)) {
-            window.alert('Invalid email address');
         }
 
         else if (formData.password !== formData.confirmPassword) {
-            window.alert('Passwords do not match');
         }
         else
         {
