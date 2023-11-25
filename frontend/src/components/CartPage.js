@@ -52,19 +52,19 @@ const CartPage = () => {
     const updateQuantity = (itemId, quantity) => {
         setCartItems(cartItems.map(item => {
             if (item.id === itemId) {
-                if (item.id === 1)
+                if (itemId === 1)
                 {
                     localStorage.setItem("P1", Number(quantity));
                 }
-                if (item.id === 2)
+                if (itemId === 2)
                 {
                     localStorage.setItem("P2", Number(quantity));
                 }
-                if (item.id === 3)
+                if (itemId=== 3)
                 {
                     localStorage.setItem("P3", Number(quantity));
                 }
-                if (item.id === 4)
+                if (itemId === 4)
                 {
                     localStorage.setItem("P4", Number(quantity));
                 }
