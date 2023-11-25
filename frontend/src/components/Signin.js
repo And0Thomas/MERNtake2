@@ -23,6 +23,9 @@ const SignIn = () => {
                         <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                             Sign In
                         </button>
+                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Sign Up
+                        </button>
                     </div>
                 </form>
             </div>
