@@ -4,6 +4,10 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
     const handleChange = (e) => {
         updateQuantity(item.id, e.target.value);
     };
+    if(item.quantity === 0)
+    {
+        return null;
+    }
 
     return (
         <div className="flex items-center justify-between p-4 border-b border-mocha">
@@ -50,12 +54,44 @@ const CartPage = () => {
             if (item.id === itemId) {
                 return { ...item, quantity: parseInt(quantity, 10) };
             }
+            if (item.id === 1)
+            {
+                localStorage.setItem("P1", Number(quantity));
+            }
+            if (item.id === 1)
+            {
+                localStorage.setItem("P2", Number(quantity));
+            }
+            if (item.id === 1)
+            {
+                localStorage.setItem("P3", Number(quantity));
+            }
+            if (item.id === 1)
+            {
+                localStorage.setItem("P4", Number(quantity));
+            }
             return item;
         }));
     };
 
     const removeItem = (itemId) => {
         setCartItems(cartItems.filter(item => item.id !== itemId));
+        if (item.id === 1)
+        {
+            localStorage.setItem("P1", 0);
+        }
+        if (item.id === 1)
+        {
+            localStorage.setItem("P2", 0);
+        }
+        if (item.id === 1)
+        {
+            localStorage.setItem("P3", 0);
+        }
+        if (item.id === 1)
+        {
+            localStorage.setItem("P4", 0);
+        }
     };
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
