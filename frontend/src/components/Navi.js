@@ -12,12 +12,12 @@ const Navbar = () => {
 
   const showAlert = (message) => {
     window.alert(message);
-    window.location.href = '/signin';
+    window.location.href = '/signup';
   };
 
   const signIn = (message) => {
     window.alert(message);
-    window.location.href = '/signin';
+    window.location.href = '/signup';
   };
 
   const home = (message) => {
