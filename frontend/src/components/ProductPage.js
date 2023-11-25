@@ -7,6 +7,35 @@ const ProductCard = ({ product, isPopular }) => {
         setQuantity(e.target.value);
     };
 
+    const handleAddToCartClick = () => {
+        onAddToCart(product.id, quantity);
+        if(product.id = 1)
+        {
+            localStorage.setItem("P1", quantity);
+        }
+        else if(product.id = 2)
+        {
+            localStorage.setItem("P2", quantity);
+        }
+        else if(product.id = 3)
+        {
+            localStorage.setItem("P3", quantity);
+        }
+        else if(product.id = 4)
+        {
+            localStorage.setItem("P4", quantity);
+        }
+        const Prod1 = localStorage.getItem("P1");
+        const Prod2 = localStorage.getItem("P2");
+        const Prod3 = localStorage.getItem("P3");
+        const Prod4 = localStorage.getItem("P4");
+
+        console.log(Prod1);
+        console.log(Prod2);
+        console.log(Prod3);
+        console.log(Prod4);
+    };
+
     return (
         <div className="relative max-w-sm rounded-lg overflow-hidden shadow-neumorphic p-6 m-4 bg-neumorphic-background">
             {isPopular && (
@@ -27,7 +56,7 @@ const ProductCard = ({ product, isPopular }) => {
                     <label htmlFor={`quantity-${product.id}`} className="block text-neumorphic-text text-sm font-bold mb-2">Quantity:</label>
                     <input type="number" id={`quantity-${product.id}`} name="quantity" min="1" value={quantity} onChange={handleQuantityChange} className="neumorphic-input"/>
                 </div>
-                <button className="neumorphic-button mt-4">
+                <button className="neumorphic-button mt-4" onClick={handleAddToCartClick}>
                     Add to Cart
                 </button>
             </div>
