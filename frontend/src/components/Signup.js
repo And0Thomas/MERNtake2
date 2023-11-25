@@ -37,6 +37,54 @@ const SignUp = () => {
         }
     };
 
+    const signup = async event =>
+    {
+        const app_name = 'www.cardinalcoffee.co'
+    
+        function buildPath(route)
+        {
+            if (process.env.NODE_ENV === 'production')
+            {
+                console.log("ONElogin")
+                return 'https://' + app_name + route;
+            }
+            else
+            {
+                console.log("TWOlogin")
+                console.log(route)
+                return 'http://localhost:5000/' + route;
+            }
+        }
+
+        event.preventDefault();
+        var obj = {login:login.value,password:password.value,FirstName:fName.value,LastName:lName.value,email:email.value};
+        var js = JSON.stringify(obj);
+        try
+        {
+            const response = await fetch(buildPath('api/signup'), {
+                method: 'POST',
+                body: js,
+                headers: { 'Content-Type': 'application/json' }
+              });
+
+            var txt = await response.text();
+            var res = JSON.parse(txt);
+            if( res.error.length > 0 )
+            {
+                setMessage( "API Error:" + res.error );
+            }
+            else
+            {
+                setMessage('Account has been added');
+            }
+        }
+
+        catch(e)
+        {
+            //console.log(e.toString());
+        }
+    };
+
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-beige-100">
             <div className="p-6 max-w-sm w-full bg-white shadow-md rounded">
@@ -45,9 +93,16 @@ const SignUp = () => {
                     {/* Name Field */}
                     <div className="mb-4">
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
-                            Name
+                            First Name
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your name" onChange={handleChange}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your first name" onChange={handleChange}/>
+                    </div>
+
+                    <div className="mb-4">
+                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
+                            Last Name
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" placeholder="Your last name" onChange={handleChange}/>
                     </div>
                     
                     {/* Email Field */}
@@ -78,7 +133,7 @@ const SignUp = () => {
 
                     {/* Sign Up Button */}
                     <div className="flex items-center justify-center">
-                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        <button className="bg-coffee-500 hover:bg-coffee-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onClick={signup}>
                             Sign Up
                         </button>
                     </div>
