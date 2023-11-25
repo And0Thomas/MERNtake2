@@ -11,22 +11,22 @@ const Navbar = () => {
   };
 
   const showAlert = (message) => {
-    window.alert(message);
+    //window.alert(message);
     window.location.href = '/signin';
   };
 
   const signIn = (message) => {
-    window.alert(message);
+    //window.alert(message);
     window.location.href = '/signin';
   };
 
   const signUp = (message) => {
-    window.alert(message);
+    //window.alert(message);
     window.location.href = '/signup';
   };
 
   const home = (message) => {
-    window.alert(message);
+    //window.alert(message);
     window.location.href = '/';
   };
 
@@ -47,10 +47,10 @@ const Navbar = () => {
           <button className='focus:outline-none' onClick={() => signIn('Contact button clicked')}>Contact</button>
         </li>
         <li className='whitespace-nowrap p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-Up</button>
+          <button className='focus:outline-none' onClick={() => signIn('Sign-Up button clicked')}>Sign-In</button>
         </li>
         <li className='whitespace-nowrap p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => signUp('Sign-Up button clicked')}>Sign-In</button>
+          <button className='focus:outline-none' onClick={() => signUp('Sign-In button clicked')}>Sign-Up</button>
         </li>
       </ul>
       <img src={Bag} alt='/' className='hidden md:flex p-3 h-11 cursor-pointer' />
