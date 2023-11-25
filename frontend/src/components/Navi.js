@@ -14,6 +14,15 @@ const Navbar = () => {
     //window.alert(message);
     window.location.href = '/signin';
   };
+  const products = (message) => {
+    //window.alert(message);
+    window.location.href = '/products';
+  };
+
+  const contacts = (message) => {
+    //window.alert(message);
+    window.location.href = '/contacts';
+  };
 
   const signIn = (message) => {
     //window.alert(message);
@@ -41,10 +50,10 @@ const Navbar = () => {
           <button className='focus:outline-none' onClick={() => home('Home button clicked')}>Home</button>
         </li>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => showAlert('Products button clicked')}>Products</button>
+          <button className='focus:outline-none' onClick={() => products('Products button clicked')}>Products</button>
         </li>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => signIn('Contact button clicked')}>Contact</button>
+          <button className='focus:outline-none' onClick={() => contacts('Contact button clicked')}>Contact</button>
         </li>
         <li className='whitespace-nowrap p-4 cursor-pointer'>
           <button className='focus:outline-none' onClick={() => signIn('Sign-Up button clicked')}>Sign-In</button>
