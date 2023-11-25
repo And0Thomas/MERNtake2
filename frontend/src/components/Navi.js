@@ -61,7 +61,7 @@ const Navbar = () => {
           <button className='focus:outline-none' onClick={() => signUp('Sign-In button clicked')}>Sign-Up</button>
         </li>
       </ul>
-      <img src={Bag} alt='/' className='hidden md:flex p-3 h-11 cursor-pointer' />
+      <img src={Bag} alt='/' className='hidden md:flex p-3 h-11 cursor-pointer' onClick={() => cart('Cart button clicked')}/>
       <div onClick={handleNav} className='block md:hidden cursor-pointer p-4'>
         {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
             <button className='focus:outline-none' onClick={() => home('Home button clicked')}>Home</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => showAlert('Products button clicked')}>Products</button>
+            <button className='focus:outline-none' onClick={() => products('Products button clicked')}>Products</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
             <button className='focus:outline-none' onClick={() => signIn('Sign-In button clicked')}>Sign-In</button>
