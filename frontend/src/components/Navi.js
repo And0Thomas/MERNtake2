@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const showAlert = (message) => {
     window.alert(message);
-    window.location.href = '/verification';
+    window.location.href = '/signin';
   };
 
   return (

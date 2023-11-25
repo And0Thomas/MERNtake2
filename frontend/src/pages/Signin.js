@@ -1,13 +1,13 @@
 import React from 'react';
 import Navi from "../components/Navi"
-import SignIn from "../components/Signin"
+import Signin from "../components/Signin"
 
-function Verification() {
+function signin() {
     return(
       <div>
         <Navi/>
-        <SignIn/>
+        <Signin/>
       </div>
     )
   }
-export default Verification;
+export default signin;
