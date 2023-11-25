@@ -9,13 +9,13 @@ const ProductCard = ({ product, isPopular}) => {
 
     const handleAddToCartClick = () => {
 
-        if (product.Id === 1) {
+        if (product.id === 1) {
             localStorage.setItem("P1", quantity);
-        } else if (product.Id === 2) {
+        } else if (product.id === 2) {
             localStorage.setItem("P2", quantity);
-        } else if (product.Id === 3) {
+        } else if (product.id === 3) {
             localStorage.setItem("P3", quantity);
-        } else if (product.Id === 4) {
+        } else if (product.id === 4) {
             localStorage.setItem("P4", quantity);
         }
 
@@ -24,6 +24,8 @@ const ProductCard = ({ product, isPopular}) => {
         const Prod3 = localStorage.getItem("P3");
         const Prod4 = localStorage.getItem("P4");
 
+        console.log("New Test");
+        console.log(product.id);
         console.log(Prod1);
         console.log(Prod2);
         console.log(Prod3);
