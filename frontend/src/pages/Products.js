@@ -7,12 +7,14 @@ function Products() {
     {
         window.location.href = '/';
     }
+    else{
   return(
     <div>
       <NaviP />
       <ProductPage />
     </div>
   )
+    }
 }
 
 export default Products

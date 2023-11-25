@@ -7,12 +7,14 @@ function ContactPs() {
     {
         window.location.href = '/';
     }
+    else{
   return(
     <div>
       <NaviP/>
       <ContactP/>
     </div>
   )
+    }
 }
 
 export default ContactPs

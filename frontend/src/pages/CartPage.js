@@ -7,12 +7,14 @@ function CartPage() {
     {
         window.location.href = '/';
     }
-  return(
-    <div>
-      <NaviP />
-      <Cart />
-    </div>
-  )
+    else{
+      return(
+        <div>
+          <NaviP />
+          <Cart />
+        </div>
+      )
+    }
 }
 
 export default CartPage

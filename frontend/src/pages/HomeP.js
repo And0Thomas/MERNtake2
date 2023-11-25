@@ -8,6 +8,8 @@ function Home() {
     {
         window.location.href = '/';
     }
+    else
+    {
   return(
     <div>
       <NaviP/>
@@ -15,6 +17,7 @@ function Home() {
       <Contact/>
     </div>
   )
+    }
 }
 
 export default Home
