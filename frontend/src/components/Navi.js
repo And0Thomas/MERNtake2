@@ -10,9 +10,8 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  const showAlert = (message) => {
-    //window.alert(message);
-    window.location.href = '/signin';
+  const cart = (message) => {
+    window.alert(message);
   };
   const products = (message) => {
     //window.alert(message);
@@ -90,7 +89,7 @@ const Navbar = () => {
             <button className='focus:outline-none' onClick={() => signUp('Sign-Up button clicked')}>Sign-Up</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => showAlert('Cart button clicked')}>Cart</button>
+            <button className='focus:outline-none' onClick={() => cart('Cart button clicked')}>Cart</button>
           </li>
           
         </ul>
