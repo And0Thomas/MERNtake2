@@ -12,3 +12,31 @@
 body {
   background-color: #121212;
 }
+
+/* Neumorphic styles with coffee theme */
+.neumorphic-button {
+  background: #f0e4d7; /* Cream color */
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 4px 4px 8px #c8b2a7, -4px -4px 8px #ffffff; /* Adjusted shadow colors */
+  color: #5d4037; /* Dark brown text */
+}
+
+.neumorphic-input {
+  background: #f0e4d7;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: inset 4px 4px 8px #c8b2a7, inset -4px -4px 8px #ffffff;
+  color: #5d4037;
+  width: 100%;
+}
+
+.bg-brown-600 {
+  background-color: #795548; /* A warm brown color */
+}
+
+.text-cream {
+  color: #f0e4d7; /* Cream color for text */
+}

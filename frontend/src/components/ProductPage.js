@@ -1,0 +1,57 @@
+import React, { useState } from 'react';
+
+const ProductCard = ({ product, isPopular }) => {
+    const [quantity, setQuantity] = useState(1);
+
+    const handleQuantityChange = (e) => {
+        setQuantity(e.target.value);
+    };
+
+    return (
+        <div className="relative max-w-sm rounded-lg overflow-hidden shadow-neumorphic p-6 m-4 bg-neumorphic-background">
+            {isPopular && (
+                <div className="absolute top-0 right-0 bg-brown-600 text-cream py-1 px-3 text-sm font-bold rounded-bl">
+                    Most Popular
+                </div>
+            )}
+            <img className="w-full h-48 object-cover mb-4" src={product.imageUrl} alt={product.name} />
+            <div className="text-center">
+                <div className="font-bold text-xl mb-2 text-neumorphic-text">{product.name}</div>
+                <p className="text-gray-700 text-base">
+                    {product.description}
+                </p>
+                <div className="text-lg text-neumorphic-text font-bold my-2">
+                    ${product.price}
+                <div className="mt-4">
+                    <label htmlFor={`quantity-${product.id}`} className="block text-neumorphic-text text-sm font-bold mb-2">Quantity:</label>
+                    <input type="number" id={`quantity-${product.id}`} name="quantity" min="1" value={quantity} onChange={handleQuantityChange} className="neumorphic-input"/>
+                </div>
+                <button className="neumorphic-button mt-4">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    );
+};
+
+const ProductsPage = () => {
+    const products = [
+        { id: 1, name: 'Product 1', description: 'Description for product 1', imageUrl: 'https://via.placeholder.com/150', price: 24.99 },
+        { id: 2, name: 'Product 2', description: 'Description for product 2', imageUrl: 'https://via.placeholder.com/150', price: 33.99 },
+        { id: 3, name: 'Product 3', description: 'Description for product 3', imageUrl: 'https://via.placeholder.com/150', price: 19.99 },
+        { id: 4, name: 'Product 4', description: 'Description for product 4', imageUrl: 'https://via.placeholder.com/150', price: 24.99 }
+    ];
+
+    return (
+        <div className="container mx-auto px-4 bg-neumorphic-background">
+            <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Our Products</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {products.map((product, index) => (
+                    <ProductCard key={product.id} product={product} isPopular={index === 0} />
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default ProductsPage;

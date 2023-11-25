@@ -1,9 +1,11 @@
 import NaviP from "../components/NaviP"
+import ProductPage from "../components/ProductPage"
 
 function Products() {
   return(
     <div>
-      <NaviP/>
+      <NaviP />
+      <ProductPage />
     </div>
   )
 }
