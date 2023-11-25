@@ -9,7 +9,7 @@ const [message,setMessage] = useState('');
 const doSignUp = async event =>
 {
     window.alert("sign up");
-    window.location.href = '/Signup';
+    window.location.href = 'https://www.cardinalcoffee.co/Signup';
     return;
 };
 
