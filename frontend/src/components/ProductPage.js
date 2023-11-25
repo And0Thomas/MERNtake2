@@ -15,6 +15,8 @@ const ProductCard = ({ product, isPopular}) => {
 
         if (product.Id === 1) {
             Pr1 = Pr1 + quantity;
+            console.log(Pr1);
+            console.log(quantity);
             localStorage.setItem("P1", quantity);
         } else if (product.Id === 2) {
             Pr2= Pr2 + quantity;

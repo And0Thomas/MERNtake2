@@ -51,10 +51,6 @@ const doLogin = async event =>
             console.log(user)
             localStorage.setItem('user_data', JSON.stringify(user));
             setMessage('');
-            localStorage.setItem("P1", 0);
-            localStorage.setItem("P2", 0);
-            localStorage.setItem("P3", 0);
-            localStorage.setItem("P4", 0);
             window.location.href = '/products';
         }
     }
