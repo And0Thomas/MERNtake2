@@ -8,7 +8,9 @@ const [message,setMessage] = useState('');
 
 const doSignUp = async event =>
 {
-    
+    window.alert("sign up");
+    window.location.href = '/signup';
+    return;
 };
 
 
