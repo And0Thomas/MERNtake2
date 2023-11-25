@@ -68,16 +68,16 @@ const doLogin = async event =>
                 <h2 className="text-lg font-semibold text-coffee-800 mb-4">Welcome Back!</h2>
                 <form>
                     <div className="mb-4">
-                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="email" ref={(c) => loginName = c}>
+                        <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="email">
                             Login
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email" ref={(c) => loginPassword = c}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email"ref={(c) => loginName = c}/>
                     </div>
                     <div className="mb-6">
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="password">
                             Password
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************"/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************" ref={(c) => loginPassword = c}/>
                         <p className="text-coffee-600 text-xs italic">Forgot your password?</p>
                     </div>
                     <div className="flex items-center justify-between">
