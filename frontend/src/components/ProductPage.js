@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ProductCard = ({ product, isPopular }) => {
+const ProductCard = ({ product, isPopular, onAddToCart }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (e) => {
