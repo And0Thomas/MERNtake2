@@ -30,11 +30,11 @@ const SignUp = () => {
         let currentErrors = {};
 
         if (!validateEmail(formData.email)) {
-            currentErrors.email = 'Invalid email address';
+            window.alert('Invalid email address');
         }
 
         if (formData.password !== formData.confirmPassword) {
-            currentErrors.password = 'Passwords do not match';
+            indow.alert('Passwords do not match');
         }
 
         setErrors(currentErrors);
@@ -46,6 +46,16 @@ const SignUp = () => {
 
     const signup = async event =>
     {
+        if (!validateEmail(formData.email)) {
+            currentErrors.email = 'Invalid email address';
+        }
+
+        else if (formData.password !== formData.confirmPassword) {
+            currentErrors.password = 'Passwords do not match';
+        }
+        else
+        {
+
         const app_name = 'www.cardinalcoffee.co/'
     
         function buildPath(route)
@@ -89,6 +99,7 @@ const SignUp = () => {
         catch(e)
         {
             //console.log(e.toString());
+        }
         }
     };
 
