@@ -15,6 +15,16 @@ const Navbar = () => {
     window.location.href = '/signin';
   };
 
+  const signIn = (message) => {
+    window.alert(message);
+    window.location.href = '/signin';
+  };
+
+  const home = (message) => {
+    window.alert(message);
+    window.location.href = '/';
+  };
+
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white font-tanker tracking-wider'>
       <img src={Logo} alt='Logo' className='h-16 cursor-pointer' />
@@ -23,13 +33,13 @@ const Navbar = () => {
       </h1>
       <ul className='hidden md:flex'>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => showAlert('Home button clicked')}>Home</button>
+          <button className='focus:outline-none' onClick={() => home('Home button clicked')}>Home</button>
         </li>
         <li className='p-4 cursor-pointer'>
           <button className='focus:outline-none' onClick={() => showAlert('Products button clicked')}>Products</button>
         </li>
         <li className='p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => showAlert('Contact button clicked')}>Contact</button>
+          <button className='focus:outline-none' onClick={() => signIn('Contact button clicked')}>Contact</button>
         </li>
         <li className='whitespace-nowrap p-4 cursor-pointer'>
           <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-In</button>
@@ -51,13 +61,13 @@ const Navbar = () => {
         </h1>
         <ul className='uppercase p-4'>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => showAlert('Home button clicked')}>Home</button>
+            <button className='focus:outline-none' onClick={() => home('Home button clicked')}>Home</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
             <button className='focus:outline-none' onClick={() => showAlert('Products button clicked')}>Products</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => showAlert('Sign-In button clicked')}>Sign-In</button>
+            <button className='focus:outline-none' onClick={() => signIn('Sign-In button clicked')}>Sign-In</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
             <button className='focus:outline-none' onClick={() => showAlert('Cart button clicked')}>Cart</button>
