@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
+import HomeP from './pages/HomeP';
 import CardPage from './pages/CardPage';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
@@ -14,6 +15,7 @@ return (
 <BrowserRouter>
 <Routes>
 <Route path="/" index element={<Home />} />
+<Route path="/p" index element={<HomeP />} />
 <Route path="/cards" index element={<CardPage />} />
 <Route path="/Signup" index element={<Signup />} />
 <Route path="/Signin" index element={<Signin />} />

@@ -36,7 +36,7 @@ const Navbar = () => {
 
   const home = (message) => {
     //window.alert(message);
-    window.location.href = '/';
+    window.location.href = '/p';
   };
 
   return (
