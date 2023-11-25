@@ -8,24 +8,13 @@ const ProductCard = ({ product, isPopular}) => {
     };
 
     const handleAddToCartClick = () => {
-        const Pr1 = localStorage.getItem("P1");
-        const Pr2 = localStorage.getItem("P2");
-        const Pr3 = localStorage.getItem("P3");
-        const Pr4 = localStorage.getItem("P4");
-
         if (product.Id === 1) {
-            Pr1 = Pr1 + quantity;
-            console.log(Pr1);
-            console.log(quantity);
             localStorage.setItem("P1", quantity);
         } else if (product.Id === 2) {
-            Pr2= Pr2 + quantity;
             localStorage.setItem("P2", quantity);
         } else if (product.Id === 3) {
-            Pr3 = Pr3 + quantity;
             localStorage.setItem("P3", quantity);
         } else if (product.Id === 4) {
-            Pr4 = Pr3 + quantity;
             localStorage.setItem("P4", quantity);
         }
 
