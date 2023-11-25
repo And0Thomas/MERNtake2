@@ -165,7 +165,7 @@ const SignUp = () => {
                         <label className="block text-coffee-700 text-sm font-bold mb-2" htmlFor="name">
                             Invite Code
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="code" name="code" type="code" placeholder="Invite Code" onChange={handleChange} ref={(c) => Code = c}/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="code" name="code" type="code" placeholder="Invite Code" onChange={handleChange}/>
                     </div>
 
                     {/* Sign Up Button */}
