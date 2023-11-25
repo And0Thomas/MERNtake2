@@ -32,10 +32,16 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 };
 
 const CartPage = () => {
+    const Pr1 = localStorage.getItem("P1");
+    const Pr2 = localStorage.getItem("P2");
+    const Pr3 = localStorage.getItem("P3");
+    const Pr4 = localStorage.getItem("P4");
     const [cartItems, setCartItems] = useState([
         // Sample cart items with coffee theme
-        { id: 1, name: 'Coffee Beans - Dark Roast', description: 'Rich and smooth dark roast beans', imageUrl: 'https://via.placeholder.com/150', price: 19.99, quantity: 2 },
-        { id: 2, name: 'Coffee Beans - Light Roast', description: 'Aromatic and light, perfect for mornings', imageUrl: 'https://via.placeholder.com/150', price: 24.99, quantity: 1 },
+        { id: 1, name: 'Coffee Beans - Dark Roast', description: 'Rich and smooth dark roast beans', imageUrl: 'https://via.placeholder.com/150', price: 24.99, quantity: Number(Pr1) },
+        { id: 2, name: 'Coffee Beans - Light Roast', description: 'Aromatic and light, perfect for mornings', imageUrl: 'https://via.placeholder.com/150', price: 33.99, quantity: Number(Pr2) },
+        { id: 3, name: 'Coffee Beans - Dark Dark Roast', description: 'Rich and smooth dark roast beans', imageUrl: 'https://via.placeholder.com/150', price: 19.99, quantity: Number(Pr3) },
+        { id: 4, name: 'Coffee Beans - Light Light Roast', description: 'Aromatic and light, perfect for mornings', imageUrl: 'https://via.placeholder.com/150', price: 24.99, quantity: Number(Pr4) },
         // Add more items as needed
     ]);
 
