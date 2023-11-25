@@ -95,6 +95,7 @@ const Navbar = () => {
           
         </ul>
       </div>
+      <link rel="stylesheet" href="style.css"></link>
       <div class="card">
         <h1>Card</h1>
         <ul class="listCard">
