@@ -1,9 +1,9 @@
-import Navi from "../components/Navi"
+import NaviP from "../components/NaviP"
 
 function Products() {
   return(
     <div>
-      <Navi/>
+      <NaviP/>
     </div>
   )
 }
