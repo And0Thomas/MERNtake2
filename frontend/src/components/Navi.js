@@ -95,6 +95,15 @@ const Navbar = () => {
           
         </ul>
       </div>
+      <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
     </div>
   );
 };
