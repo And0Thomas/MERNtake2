@@ -13,14 +13,18 @@ const ProductCard = ({ product, isPopular}) => {
         const Pr3 = localStorage.getItem("P3");
         const Pr4 = localStorage.getItem("P4");
 
-        if (product.Id == 1) {
-            localStorage.setItem("P1", Pr1 + quantity);
-        } else if (product.Id == 2) {
-            localStorage.setItem("P2", Pr2 + quantity);
-        } else if (product.Id == 3) {
-            localStorage.setItem("P3", Pr3 + quantity);
-        } else if (product.Id == 4) {
-            localStorage.setItem("P4", Pr4 + quantity);
+        if (product.Id === 1) {
+            Pr1 = Pr1 + quantitiy;
+            localStorage.setItem("P1", Pr1);
+        } else if (product.Id === 2) {
+            Pr2= Pr2 + quantitiy;
+            localStorage.setItem("P2", Pr2);
+        } else if (product.Id === 3) {
+            Pr3 = Pr3 + quantitiy;
+            localStorage.setItem("P3", Pr3);
+        } else if (product.Id === 4) {
+            Pr4 = Pr3 + quantitiy;
+            localStorage.setItem("P4", Pr4);
         }
 
         const Prod1 = localStorage.getItem("P1");
