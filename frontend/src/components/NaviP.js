@@ -28,9 +28,10 @@ const Navbar = () => {
     window.location.href = '/signin';
   };
 
-  const signUp = (message) => {
+  const logOut = (message) => {
     //window.alert(message);
-    window.location.href = '/signup';
+    localStorage.clear();
+    window.location.href = '/';
   };
 
   const home = (message) => {
@@ -55,10 +56,7 @@ const Navbar = () => {
           <button className='focus:outline-none' onClick={() => contacts('Contact button clicked')}>Contact</button>
         </li>
         <li className='whitespace-nowrap p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => signIn('Sign-Up button clicked')}>Sign-In</button>
-        </li>
-        <li className='whitespace-nowrap p-4 cursor-pointer'>
-          <button className='focus:outline-none' onClick={() => signUp('Sign-In button clicked')}>Sign-Up</button>
+          <button className='focus:outline-none' onClick={() => logOut('Sign-Up button clicked')}>Log-Out</button>
         </li>
       </ul>
       <img src={Bag} alt='/' className='hidden md:flex p-3 h-11 cursor-pointer' onClick={() => cart('Cart button clicked')}/>
@@ -83,10 +81,7 @@ const Navbar = () => {
             <button className='focus:outline-none' onClick={() => products('Products button clicked')}>Products</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => signIn('Sign-In button clicked')}>Sign-In</button>
-          </li>
-          <li className='p-4 border-b cursor-pointer'>
-            <button className='focus:outline-none' onClick={() => signUp('Sign-Up button clicked')}>Sign-Up</button>
+            <button className='focus:outline-none' onClick={() => logOut('Sign-In button clicked')}>Log-Out</button>
           </li>
           <li className='p-4 border-b cursor-pointer'>
             <button className='focus:outline-none' onClick={() => cart('Cart button clicked')}>Cart</button>

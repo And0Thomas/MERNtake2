@@ -15,7 +15,7 @@ const Navbar = () => {
   };
   const products = (message) => {
     //window.alert(message);
-    window.location.href = '/products';
+    window.location.href = '/signin';
   };
 
   const contacts = (message) => {
