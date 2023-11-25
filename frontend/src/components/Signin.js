@@ -6,10 +6,10 @@ var loginName;
 var loginPassword;
 const [message,setMessage] = useState('');
 
-const doSignUp = async event =>
+const doSignUp = () =>
 {
     window.alert("sign up");
-    window.location.href = 'https://www.cardinalcoffee.co/Signup';
+    window.location.href = '/signin';
     return;
 };
 
