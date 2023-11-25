@@ -55,7 +55,7 @@ const SignUp = () => {
         else if (formData.password !== formData.confirmPassword) 
         {
         }
-        else if (formData.password !== 'UCF')
+        else if (formData.code !== 'UCF')
         {
         }
         else
