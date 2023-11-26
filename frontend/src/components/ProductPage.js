@@ -56,7 +56,7 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
                     Most Popular
                 </div>
             )}
-            <img className="w-full h-48 object-cover mb-4" src={product.imageUrl} alt={product.name} />
+            <img className="w-full h-48 object-cover mb-4" src={Ucf} alt={product.name} />
             <div className="text-center">
                 <div className="font-bold text-xl mb-2 text-neumorphic-text">{product.name}</div>
                 <p className="text-gray-700 text-base">
@@ -91,7 +91,7 @@ const ProductsPage = () => {
     };
 
     const products = [
-        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: 'Ucf', price: 34.99 },
+        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: {Ucf}, price: 34.99 },
         { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: 'frontend/src/assets/stability.png', price: 32.99 },
         { id: 3, name: 'Determination - Medium Roast', description: "Bold yet smooth, this roast is for the focused and resolute.", imageUrl: '../src/assets/determination.png', price: 32.99 },
         { id: 4, name: 'Confidence - Dark Roast', description: "A rich, robust dark roast for those who savor intensity and boldness.", imageUrl: '..frontend/src/assets/confidence.png', price: 32.99 }
