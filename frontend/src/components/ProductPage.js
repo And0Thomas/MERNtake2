@@ -162,17 +162,6 @@ const ProductsPage = () => {
         <div onClick={handleNav} className='block md:hidden cursor-pointer p-4'>
           {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
-        <div className="min-h-screen bg-neumorphic-background z-0">
-            <div className="container mx-auto px-4">
-                <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Cardinal Coffee's Products</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {products.map((product, index) => (
-                        <ProductCard key={product.id} product={product} isPopular={index === 0} onAddToCart={handleAddToCart} />
-                    ))}
-                </div>
-            </div>
-            {notification && <Notification message={notification} />}
-        </div>
         <div
           className={
             !nav
@@ -200,6 +189,17 @@ const ProductsPage = () => {
           </ul>
         </div>
       </div>
+      <div className="min-h-screen bg-neumorphic-background z-0">
+            <div className="container mx-auto px-4">
+                <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Cardinal Coffee's Products</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {products.map((product, index) => (
+                        <ProductCard key={product.id} product={product} isPopular={index === 0} onAddToCart={handleAddToCart} />
+                    ))}
+                </div>
+            </div>
+            {notification && <Notification message={notification} />}
+        </div>
       </div>
     );
 };
