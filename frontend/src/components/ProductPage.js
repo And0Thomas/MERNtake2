@@ -1,39 +1,25 @@
 import React, { useState } from 'react';
 
-const ProductCard = ({ product, isPopular}) => {
+const Notification = ({ message }) => {
+    return (
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded-lg shadow">
+            {message}
+        </div>
+    );
+};
+
+const ProductCard = ({ product, isPopular, onAddToCart }) => {
     const [quantity, setQuantity] = useState(1);
+    const [isPressed, setIsPressed] = useState(false);
 
     const handleQuantityChange = (e) => {
         setQuantity(e.target.value);
     };
 
-    const handleAddToCartClick = () => {
-        const Pr1 = localStorage.getItem("P1");
-        const Pr2 = localStorage.getItem("P2");
-        const Pr3 = localStorage.getItem("P3");
-        const Pr4 = localStorage.getItem("P4");
-
-        if (product.id === 1) {
-            localStorage.setItem("P1", Number(quantity) + Number(Pr1));
-        } else if (product.id === 2) {
-            localStorage.setItem("P2", Number(quantity) + Number(Pr2));
-        } else if (product.id === 3) {
-            localStorage.setItem("P3", Number(quantity) + Number(Pr3));
-        } else if (product.id === 4) {
-            localStorage.setItem("P4", Number(quantity) + Number(Pr4));
-        }
-
-        const Prod1 = localStorage.getItem("P1");
-        const Prod2 = localStorage.getItem("P2");
-        const Prod3 = localStorage.getItem("P3");
-        const Prod4 = localStorage.getItem("P4");
-
-        console.log("New Test");
-        console.log(product.id);
-        console.log(Prod1);
-        console.log(Prod2);
-        console.log(Prod3);
-        console.log(Prod4);
+    const handleAddToCart = () => {
+        setIsPressed(true);
+        onAddToCart(product.name);
+        setTimeout(() => setIsPressed(false), 200); // Reset button state after 200ms
     };
 
     return (
@@ -56,7 +42,12 @@ const ProductCard = ({ product, isPopular}) => {
                     <label htmlFor={`quantity-${product.id}`} className="block text-neumorphic-text text-sm font-bold mb-2">Quantity:</label>
                     <input type="number" id={`quantity-${product.id}`} name="quantity" min="1" value={quantity} onChange={handleQuantityChange} className="neumorphic-input"/>
                 </div>
-                <button className="neumorphic-button mt-4" onClick={handleAddToCartClick}>
+                <button 
+                    className={`neumorphic-button mt-4 ${isPressed ? 'bg-gray-400' : 'bg-gray-200'}`}
+                    onMouseDown={handleAddToCart}
+                    onMouseUp={() => setIsPressed(false)}
+                    onMouseLeave={() => setIsPressed(false)}
+                >
                     Add to Cart
                 </button>
             </div>
@@ -65,21 +56,31 @@ const ProductCard = ({ product, isPopular}) => {
 };
 
 const ProductsPage = () => {
+    const [notification, setNotification] = useState('');
+
+    const handleAddToCart = (productName) => {
+        setNotification(`${productName} has been added to your cart`);
+        setTimeout(() => setNotification(''), 3000); // Clear notification after 3 seconds
+    };
+
     const products = [
-        { id: 1, name: 'Product 1', description: 'Description for product 1', imageUrl: 'https://via.placeholder.com/150', price: 24.99 },
-        { id: 2, name: 'Product 2', description: 'Description for product 2', imageUrl: 'https://via.placeholder.com/150', price: 33.99 },
-        { id: 3, name: 'Product 3', description: 'Description for product 3', imageUrl: 'https://via.placeholder.com/150', price: 19.99 },
-        { id: 4, name: 'Product 4', description: 'Description for product 4', imageUrl: 'https://via.placeholder.com/150', price: 24.99 }
+        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: 'src/assets/ucf.png', price: 34.99 },
+        { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: 'src/assets/stability.png', price: 32.99 },
+        { id: 3, name: 'Determination - Medium Roast', description: "Bold yet smooth, this roast is for the focused and resolute.", imageUrl: 'src/assets/determination.png', price: 32.99 },
+        { id: 4, name: 'Confidence - Dark Roast', description: "A rich, robust dark roast for those who savor intensity and boldness.", imageUrl: 'src/assets/confidence.png', price: 32.99 }
     ];
 
     return (
-        <div className="container mx-auto px-4 bg-neumorphic-background">
-            <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Our Products</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {products.map((product, index) => (
-                    <ProductCard key={product.id} product={product} isPopular={index === 0} />
-                ))}
+        <div className="min-h-screen bg-neumorphic-background">
+            <div className="container mx-auto px-4">
+                <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Our Products</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {products.map((product, index) => (
+                        <ProductCard key={product.id} product={product} isPopular={index === 0} onAddToCart={handleAddToCart} />
+                    ))}
+                </div>
             </div>
+            {notification && <Notification message={notification} />}
         </div>
     );
 };
