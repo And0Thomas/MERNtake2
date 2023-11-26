@@ -107,7 +107,7 @@ const CheckoutPage = ({ cartTotal }) => {
                 </div>
 
                 <div className="text-center font-bold mb-6 text-xl">
-                    Total: ${cartTotal.toFixed(2)}
+                    Total: ${cartTotal}
                 </div>
 
                 <div className="flex justify-center">
