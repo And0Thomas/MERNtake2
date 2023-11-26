@@ -14,6 +14,10 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
 
     const handleQuantityChange = (e) => {
         setQuantity(e.target.value);
+    };
+
+    const handleAddToCart = () => {
+        setIsPressed(true);
         const Pr1 = localStorage.getItem("P1");
         const Pr2 = localStorage.getItem("P2");
         const Pr3 = localStorage.getItem("P3");
@@ -40,10 +44,6 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
         console.log(Prod2);
         console.log(Prod3);
         console.log(Prod4);
-    };
-
-    const handleAddToCart = () => {
-        setIsPressed(true);
         onAddToCart(product.name);
         setTimeout(() => setIsPressed(false), 200); // Reset button state after 200ms
     };
@@ -90,7 +90,7 @@ const ProductsPage = () => {
     };
 
     const products = [
-        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: '../assets/ucf.png', price: 34.99 },
+        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: '..src/assets/ucf.png', price: 34.99 },
         { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: '../assets/stability.png', price: 32.99 },
         { id: 3, name: 'Determination - Medium Roast', description: "Bold yet smooth, this roast is for the focused and resolute.", imageUrl: '../assets/determination.png', price: 32.99 },
         { id: 4, name: 'Confidence - Dark Roast', description: "A rich, robust dark roast for those who savor intensity and boldness.", imageUrl: '../assets/confidence.png', price: 32.99 }
