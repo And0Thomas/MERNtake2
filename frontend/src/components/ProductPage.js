@@ -14,6 +14,32 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
 
     const handleQuantityChange = (e) => {
         setQuantity(e.target.value);
+        const Pr1 = localStorage.getItem("P1");
+        const Pr2 = localStorage.getItem("P2");
+        const Pr3 = localStorage.getItem("P3");
+        const Pr4 = localStorage.getItem("P4");
+
+        if (product.id === 1) {
+            localStorage.setItem("P1", Number(quantity) + Number(Pr1));
+        } else if (product.id === 2) {
+            localStorage.setItem("P2", Number(quantity) + Number(Pr2));
+        } else if (product.id === 3) {
+            localStorage.setItem("P3", Number(quantity) + Number(Pr3));
+        } else if (product.id === 4) {
+            localStorage.setItem("P4", Number(quantity) + Number(Pr4));
+        }
+
+        const Prod1 = localStorage.getItem("P1");
+        const Prod2 = localStorage.getItem("P2");
+        const Prod3 = localStorage.getItem("P3");
+        const Prod4 = localStorage.getItem("P4");
+
+        console.log("New Test");
+        console.log(product.id);
+        console.log(Prod1);
+        console.log(Prod2);
+        console.log(Prod3);
+        console.log(Prod4);
     };
 
     const handleAddToCart = () => {
@@ -29,7 +55,7 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
                     Most Popular
                 </div>
             )}
-            <img className="w-full h-48 object-cover mb-4" src='ucf.png' alt={product.name} />
+            <img className="w-full h-48 object-cover mb-4" src={product.imageUrl} alt={product.name} />
             <div className="text-center">
                 <div className="font-bold text-xl mb-2 text-neumorphic-text">{product.name}</div>
                 <p className="text-gray-700 text-base">
@@ -64,10 +90,10 @@ const ProductsPage = () => {
     };
 
     const products = [
-        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: '/ucf.png', price: 34.99 },
-        { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: '/stability.png', price: 32.99 },
-        { id: 3, name: 'Determination - Medium Roast', description: "Bold yet smooth, this roast is for the focused and resolute.", imageUrl: '/determination.png', price: 32.99 },
-        { id: 4, name: 'Confidence - Dark Roast', description: "A rich, robust dark roast for those who savor intensity and boldness.", imageUrl: '/confidence.png', price: 32.99 }
+        { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: '../assets/ucf.png', price: 34.99 },
+        { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: '../assets/stability.png', price: 32.99 },
+        { id: 3, name: 'Determination - Medium Roast', description: "Bold yet smooth, this roast is for the focused and resolute.", imageUrl: '../assets/determination.png', price: 32.99 },
+        { id: 4, name: 'Confidence - Dark Roast', description: "A rich, robust dark roast for those who savor intensity and boldness.", imageUrl: '../assets/confidence.png', price: 32.99 }
     ];
 
     return (
