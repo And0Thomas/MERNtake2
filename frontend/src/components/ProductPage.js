@@ -165,8 +165,8 @@ const ProductsPage = () => {
         <div
           className={
             !nav
-              ? 'fixed left-0 top-0 w-[40%] h-full border-r border-r-white-900 bg-[#171717] ease-in-out duration-500 md:hidden'
-              : 'fixed left-[-100%]'
+              ? 'fixed left-0 top-0 w-[40%] h-full border-r border-r-white-900 bg-[#171717] ease-in-out duration-500 md:hidden z-20'
+              : 'fixed left-[-100%] z-20'
           }
         >
           <h1 className='w-full text-3xl font-bold text-[#f0f0f0] m-4'>
