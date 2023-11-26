@@ -95,7 +95,7 @@ const ProductsPage = () => {
 
     const products = [
         { id: 1, name: 'UCF - Specialty Roast', description: "A distinctive blend embodying UCF's vibrant spirit, perfect for the passionate supporter.", imageUrl: Ucf, price: 34.99 },
-        { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: '../assets/stability.png', price: 32.99 },
+        { id: 2, name: 'Stability - Light Roast', description: "A serene, soft, and balanced light roast for a smooth start to your day.", imageUrl: Stability, price: 32.99 },
         { id: 3, name: 'Determination - Medium Roast', description: "Bold yet smooth, this roast is for the focused and resolute.", imageUrl: Determination, price: 32.99 },
         { id: 4, name: 'Confidence - Dark Roast', description: "A rich, robust dark roast for those who savor intensity and boldness.", imageUrl: Confidence, price: 32.99 }
     ];
