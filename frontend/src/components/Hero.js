@@ -10,7 +10,7 @@ const Hero = () => {
                 <p className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>Perch on the peak of</p>
                 <Typed 
                 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'
-                strings={['Flavour.', 'Quality.', 'Novelty.']} 
+                strings={['Flavor.', 'Quality.', 'Novelty.']} 
                 typeSpeed={120} 
                 backSpeed={140} 
                 loop

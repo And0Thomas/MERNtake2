@@ -68,7 +68,7 @@ const CheckoutPage = ({ cartTotal }) => {
     };
 
     const handleReturnHome = () => {
-        window.location.reload(); // Reloads the current page
+        window.location.href = '/p'; // Reloads the current page
     };
 
     return (
@@ -120,7 +120,7 @@ const CheckoutPage = ({ cartTotal }) => {
 };
 
 const App = () => {
-    const cartTotal = 200; // Static cart total for testing
+    const cartTotal = localStorage.getItem("Total");
 
     return <CheckoutPage cartTotal={cartTotal} />;
 };

@@ -101,6 +101,8 @@ const CartPage = () => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     
     const handleProceedToCheckout = () => {
+        var total = totalPrice.toFixed(2);
+        localStorage.setItem("Total", total);
         window.location.href = '/Checkout';
     };
 
