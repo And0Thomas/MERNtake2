@@ -10,8 +10,9 @@ function Products() {
     else{
   return(
     <div>
-      <NaviP />
+      
       <ProductPage />
+      <NaviP />
     </div>
   )
     }

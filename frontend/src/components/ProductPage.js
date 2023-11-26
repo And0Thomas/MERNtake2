@@ -103,7 +103,7 @@ const ProductsPage = () => {
     return (
         <div className="min-h-screen bg-neumorphic-background">
             <div className="container mx-auto px-4">
-                <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Our Products</h1>
+                <h1 className="text-3xl font-bold text-center my-8 text-neumorphic-text">Cardinal Coffee's Products</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {products.map((product, index) => (
                         <ProductCard key={product.id} product={product} isPopular={index === 0} onAddToCart={handleAddToCart} />
