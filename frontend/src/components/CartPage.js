@@ -99,6 +99,10 @@ const CartPage = () => {
     };
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    
+    const handleProceedToCheckout = () => {
+        window.location.href = '/Checkout';
+    };
 
     return (
         <div className="container mx-auto p-6 bg-cappuccino-cream">
@@ -112,7 +116,7 @@ const CartPage = () => {
                 Total: ${totalPrice.toFixed(2)}
             </div>
             <div className="text-right mt-6">
-                <button className="bg-mocha hover:bg-espresso-dark text-cappuccino-cream font-bold py-2 px-4 rounded">
+                <button className="bg-mocha hover:bg-espresso-dark text-cappuccino-cream font-bold py-2 px-4 rounded" onClick={handleProceedToCheckout}>
                     Proceed to Checkout
                 </button>
             </div>
