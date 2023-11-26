@@ -3,6 +3,9 @@ import Ucf from '../assets/ucf.svg';
 import Stability from '../assets/stability.svg';
 import Determination from '../assets/determination.svg';
 import Confidence from '../assets/confidence.svg';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import Logo from '../assets/logo.svg';
+import Bag from '../assets/bag.svg';
 
 const Notification = ({ message }) => {
     return (
