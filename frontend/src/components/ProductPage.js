@@ -53,7 +53,7 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
     };
 
     return (
-        <div className="relative max-w-sm rounded-lg overflow-hidden shadow-neumorphic p-6 m-4 bg-neumorphic-background">
+        <div className="relative max-w-sm rounded-lg overflow-hidden shadow-neumorphic p-6 m-4 bg-neumorphic-background z-0">
             {isPopular && (
                 <div className="absolute top-0 right-0 bg-brown-600 text-cream py-1 px-3 text-sm font-bold rounded-bl">
                     Most Popular
