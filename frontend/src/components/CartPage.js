@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import Ucf from '../assets/ucf.svg';
+import Stability from '../assets/stability.svg';
+import Determination from '../assets/determination.svg';
+import Confidence from '../assets/confidence.svg';
 
 const CartItem = ({ item, updateQuantity, removeItem }) => {
     const handleChange = (e) => {

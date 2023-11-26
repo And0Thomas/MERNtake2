@@ -10,6 +10,7 @@ import Products from './pages/Products';
 import Contacts from './pages/Contacts';
 import ContactP from './pages/ContactP';
 import CartPage from './pages/CartPage';
+import Checkout from './pages/Checkout';
 function App() {
 return (
 <BrowserRouter>
@@ -23,6 +24,7 @@ return (
 <Route path="/Contacts" index element={<Contacts />} />
 <Route path="/ContactP" index element={<ContactP />} />
 <Route path="/Cart" index element={<CartPage />} />
+<Route path="/Checkout" index element={<Checkout />} />
 </Routes>
 </BrowserRouter>
 );
