@@ -29,7 +29,7 @@ const ProductCard = ({ product, isPopular, onAddToCart }) => {
                     Most Popular
                 </div>
             )}
-            <img className="w-full h-48 object-cover mb-4" src='/ucf.png' alt={product.name} />
+            <img className="w-full h-48 object-cover mb-4" src='ucf.png' alt={product.name} />
             <div className="text-center">
                 <div className="font-bold text-xl mb-2 text-neumorphic-text">{product.name}</div>
                 <p className="text-gray-700 text-base">
