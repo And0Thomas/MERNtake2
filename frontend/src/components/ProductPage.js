@@ -140,7 +140,7 @@ const ProductsPage = () => {
     return (
         <div>
          <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white font-tanker tracking-wider z-10'>
-        <img src={Logo} alt='Logo' className='h-16 cursor-pointer' />
+        <img src={Logo} alt='Logo' className='h-16 cursor-pointer' onClick={() => home('Home button clicked')}  />
         <h1 className='w-full text-3xl font-bold text-[#f0f0f0] hidden sm:flex'>
           Cardinal Coffee
         </h1>
